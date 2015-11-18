@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CKCircleView.h"
 @interface ViewController : UIViewController
-
+@property CKCircleView* dialView;
 
 @end
 
