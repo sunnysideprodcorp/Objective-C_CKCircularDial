@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CKCircleView.h"
 #import <math.h>
-@interface ViewController () <UIGestureRecognizerDelegate>
+@interface ViewController () 
 
 @end
 
@@ -17,41 +17,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dialView = [[CKCircleView alloc] initWithFrame:self.view.frame];
+    CGFloat width = self.view.frame.size.width;
+    
+    self.dialView = [[CKCircleView alloc] initWithFrame:CGRectMake((width - 200)/2, 100, 200, 200)];
+    self.dialView.arcColor = [UIColor whiteColor];
+    self.dialView.backColor = [UIColor lightGrayColor];
+    self.dialView.dialColor = [UIColor whiteColor];
+    self.dialView.arcRadius = 80;
+    self.dialView.units = @"hours";
+    self.dialView.minNum = 2;
+    self.dialView.maxNum = 10;
+    self.dialView.labelColor = [UIColor whiteColor];
+    self.dialView.labelFont = [UIFont systemFontOfSize:20.0];
     [self.view addSubview: self.dialView];
     
-    UIPanGestureRecognizer *pv = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    [self.dialView addGestureRecognizer:pv];
+    self.dialView2 = [[CKCircleView alloc] initWithFrame:CGRectMake((width - 200)/2, 340, 200, 200)];
+    self.dialView2.arcColor = [UIColor redColor];
+    self.dialView2.backColor = [UIColor clearColor];
+    self.dialView2.dialColor = [UIColor redColor];
+    self.dialView2.arcRadius = 80.0;
+    self.dialView2.dialRadius = 20.0;
+    self.dialView2.units = @"%";
+    self.dialView2.arcThickness = 1.0;
+    self.dialView2.labelColor = [UIColor redColor];
+    self.dialView2.labelFont = [UIFont fontWithName:@"Helvetica" size:50.0];
+    [self.view addSubview: self.dialView2];
     
+    self.dialView3 = [[CKCircleView alloc] initWithFrame:CGRectMake((width - 80)/2, 580, 80, 80)];
+    self.dialView3.arcColor = [UIColor purpleColor];
+    self.dialView3.backColor = [UIColor greenColor];
+    self.dialView3.dialColor = [UIColor yellowColor];
+    self.dialView3.arcRadius = 30.0;
+    self.dialView3.dialRadius = 5.0;
+    self.dialView3.arcThickness = 1.0;
+    self.dialView3.labelColor = [UIColor redColor];
+    self.dialView3.labelFont = [UIFont fontWithName:@"Helvetica" size:10.0];
+    self.dialView3.minNum = 100;
+    self.dialView3.maxNum = 1000;
+    [self.view addSubview: self.dialView3];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void) handlePan:(UIPanGestureRecognizer *)pv {
-    //CGPoint translation = [pv translationInView:self.view];
-    CGPoint translation = [pv locationInView:self.view];
-    CGFloat x_displace = translation.x - self.dialView.center.x;
-    CGFloat y_displace = -1.0*(translation.y - self.dialView.center.y);
-    double radius = pow(x_displace, 2) + pow(y_displace, 2);
-    radius = pow(radius, .5);
-    double angle = 180/M_PI*asin(x_displace/radius);
-    if (x_displace > 0 && y_displace < 0){
-        angle = 180 - angle;
-    }
-    else if (x_displace < 0){
-        if(y_displace > 0){
-            angle = 360.0 + angle;
-        }
-        else if(y_displace <= 0){
-            angle = 180 + -1.0*angle;
-        }
-    }
-    NSLog(@"moving to this angle %f", angle);
-    [self.dialView moveCircleToAngle:angle];
 }
 
 @end
