@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CKCircleView.h"
+#import "CKCircleView2.h"
+#import "CKCircleView3.h"
+
 @interface ViewController : UIViewController
 @property CKCircleView* dialView;
-@property CKCircleView* dialView2;
-@property CKCircleView* dialView3;
+@property CKCircleView2* dialView2;
+@property CKCircleView3* dialView3;
 @end
 

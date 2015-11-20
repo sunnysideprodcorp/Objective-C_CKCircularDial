@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1002AA001BFF8BD500B48C98 /* USINGKVOLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1002A9FF1BFF8BD500B48C98 /* USINGKVOLabel.m */; settings = {ASSET_TAGS = (); }; };
+		1002AA041BFF8C0700B48C98 /* CKCircleView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1002AA031BFF8C0700B48C98 /* CKCircleView2.m */; settings = {ASSET_TAGS = (); }; };
+		1002AA071BFF8CA900B48C98 /* CKCircleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1002AA061BFF8CA900B48C98 /* CKCircleLabel.m */; settings = {ASSET_TAGS = (); }; };
+		1002AA0B1BFF95E400B48C98 /* CKCircleView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 1002AA0A1BFF95E400B48C98 /* CKCircleView3.m */; settings = {ASSET_TAGS = (); }; };
+		1002AA0D1BFF970900B48C98 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1002AA0C1BFF970900B48C98 /* CoreText.framework */; };
 		10BDF4451BFD1C13007D2819 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BDF4441BFD1C13007D2819 /* main.m */; };
 		10BDF4481BFD1C13007D2819 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BDF4471BFD1C13007D2819 /* AppDelegate.m */; };
 		10BDF44B1BFD1C13007D2819 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BDF44A1BFD1C13007D2819 /* ViewController.m */; };
@@ -17,6 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1002A9FE1BFF8BD500B48C98 /* USINGKVOLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USINGKVOLabel.h; sourceTree = "<group>"; };
+		1002A9FF1BFF8BD500B48C98 /* USINGKVOLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USINGKVOLabel.m; sourceTree = "<group>"; };
+		1002AA021BFF8C0700B48C98 /* CKCircleView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCircleView2.h; sourceTree = "<group>"; };
+		1002AA031BFF8C0700B48C98 /* CKCircleView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCircleView2.m; sourceTree = "<group>"; };
+		1002AA051BFF8CA900B48C98 /* CKCircleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCircleLabel.h; sourceTree = "<group>"; };
+		1002AA061BFF8CA900B48C98 /* CKCircleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCircleLabel.m; sourceTree = "<group>"; };
+		1002AA091BFF95E400B48C98 /* CKCircleView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCircleView3.h; sourceTree = "<group>"; };
+		1002AA0A1BFF95E400B48C98 /* CKCircleView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCircleView3.m; sourceTree = "<group>"; };
+		1002AA0C1BFF970900B48C98 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		10BDF4401BFD1C13007D2819 /* CKCircleWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKCircleWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BDF4441BFD1C13007D2819 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10BDF4461BFD1C13007D2819 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,15 +50,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1002AA0D1BFF970900B48C98 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1002A9FD1BFF8BBE00B48C98 /* Using Views */ = {
+			isa = PBXGroup;
+			children = (
+				10BDF45A1BFD1C32007D2819 /* CKCircleView.h */,
+				10BDF45B1BFD1C32007D2819 /* CKCircleView.m */,
+			);
+			name = "Using Views";
+			sourceTree = "<group>";
+		};
+		1002AA011BFF8BEC00B48C98 /* UsingKVOLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1002AA021BFF8C0700B48C98 /* CKCircleView2.h */,
+				1002AA031BFF8C0700B48C98 /* CKCircleView2.m */,
+				1002AA051BFF8CA900B48C98 /* CKCircleLabel.h */,
+				1002AA061BFF8CA900B48C98 /* CKCircleLabel.m */,
+			);
+			name = UsingKVOLabel;
+			sourceTree = "<group>";
+		};
+		1002AA081BFF95CE00B48C98 /* drawRect */ = {
+			isa = PBXGroup;
+			children = (
+				1002AA091BFF95E400B48C98 /* CKCircleView3.h */,
+				1002AA0A1BFF95E400B48C98 /* CKCircleView3.m */,
+			);
+			name = drawRect;
+			sourceTree = "<group>";
+		};
 		10BDF4371BFD1C13007D2819 = {
 			isa = PBXGroup;
 			children = (
+				1002AA0C1BFF970900B48C98 /* CoreText.framework */,
 				10BDF4421BFD1C13007D2819 /* CKCircleWidget */,
 				10BDF4411BFD1C13007D2819 /* Products */,
 			);
@@ -61,17 +106,20 @@
 		10BDF4421BFD1C13007D2819 /* CKCircleWidget */ = {
 			isa = PBXGroup;
 			children = (
+				1002AA081BFF95CE00B48C98 /* drawRect */,
+				1002AA011BFF8BEC00B48C98 /* UsingKVOLabel */,
+				1002A9FD1BFF8BBE00B48C98 /* Using Views */,
 				10BDF4461BFD1C13007D2819 /* AppDelegate.h */,
 				10BDF4471BFD1C13007D2819 /* AppDelegate.m */,
 				10BDF4491BFD1C13007D2819 /* ViewController.h */,
 				10BDF44A1BFD1C13007D2819 /* ViewController.m */,
-				10BDF45A1BFD1C32007D2819 /* CKCircleView.h */,
-				10BDF45B1BFD1C32007D2819 /* CKCircleView.m */,
 				10BDF44C1BFD1C13007D2819 /* Main.storyboard */,
 				10BDF44F1BFD1C13007D2819 /* Assets.xcassets */,
 				10BDF4511BFD1C13007D2819 /* LaunchScreen.storyboard */,
 				10BDF4541BFD1C13007D2819 /* Info.plist */,
 				10BDF4431BFD1C13007D2819 /* Supporting Files */,
+				1002A9FE1BFF8BD500B48C98 /* USINGKVOLabel.h */,
+				1002A9FF1BFF8BD500B48C98 /* USINGKVOLabel.m */,
 			);
 			path = CKCircleWidget;
 			sourceTree = "<group>";
@@ -154,9 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1002AA0B1BFF95E400B48C98 /* CKCircleView3.m in Sources */,
+				1002AA001BFF8BD500B48C98 /* USINGKVOLabel.m in Sources */,
+				1002AA041BFF8C0700B48C98 /* CKCircleView2.m in Sources */,
 				10BDF45C1BFD1C32007D2819 /* CKCircleView.m in Sources */,
 				10BDF44B1BFD1C13007D2819 /* ViewController.m in Sources */,
 				10BDF4481BFD1C13007D2819 /* AppDelegate.m in Sources */,
+				1002AA071BFF8CA900B48C98 /* CKCircleLabel.m in Sources */,
 				10BDF4451BFD1C13007D2819 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +356,7 @@
 				10BDF4591BFD1C13007D2819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

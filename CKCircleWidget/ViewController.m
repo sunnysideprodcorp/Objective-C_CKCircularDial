@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "CKCircleView.h"
 #import <math.h>
 @interface ViewController () 
 
@@ -31,7 +30,7 @@
     self.dialView.labelFont = [UIFont systemFontOfSize:20.0];
     [self.view addSubview: self.dialView];
     
-    self.dialView2 = [[CKCircleView alloc] initWithFrame:CGRectMake((width - 200)/2, 340, 200, 200)];
+    self.dialView2 = [[CKCircleView2 alloc] initWithFrame:CGRectMake((width - 200)/2, 340, 200, 200)];
     self.dialView2.arcColor = [UIColor redColor];
     self.dialView2.backColor = [UIColor clearColor];
     self.dialView2.dialColor = [UIColor redColor];
@@ -43,7 +42,7 @@
     self.dialView2.labelFont = [UIFont fontWithName:@"Helvetica" size:50.0];
     [self.view addSubview: self.dialView2];
     
-    self.dialView3 = [[CKCircleView alloc] initWithFrame:CGRectMake((width - 80)/2, 580, 80, 80)];
+    self.dialView3 = [[CKCircleView3 alloc] initWithFrame:CGRectMake((width - 80)/2, 580, 80, 80)];
     self.dialView3.arcColor = [UIColor purpleColor];
     self.dialView3.backColor = [UIColor greenColor];
     self.dialView3.dialColor = [UIColor yellowColor];
